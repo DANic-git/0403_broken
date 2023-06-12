@@ -1,0 +1,9 @@
+server {
+    listen 80 default_server;
+    server_name _;
+
+    location /common/img/uploaded/files/pdf/cyber/ {
+        root /usr/share/nginx/html;
+    }
+
+}
