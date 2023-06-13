@@ -1,6 +1,7 @@
 FROM maven:3-eclipse-temurin-17 as build
 WORKDIR /app
 
+COPY . .
 COPY conf/russian_trusted_root_ca_pem.crt /usr/local/share/ca-certificates/russian_trusted_root_ca_pem.crt
 
 RUN keytool -import -noprompt -trustcacerts -alias russian_trusted_root_ca_pem -file /usr/local/share/ca-certificates/russian_trusted_root_ca_pem.crt -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit
