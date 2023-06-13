@@ -12,6 +12,7 @@ RUN mvn verify
 FROM eclipse-temurin:17
 WORKDIR /app
 ENV SSL_CERT_FILE /usr/local/share/ca-certificates/russian_trusted_root_ca_pem.crt
+ENV CURLOPT_SSL_VERIFYPEER false
 COPY --from=build /app/target/client-jar-with-dependencies.jar ./client.jar
 COPY conf/russian_trusted_root_ca_pem.crt /usr/local/share/ca-certificates/russian_trusted_root_ca_pem.crt
 
