@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class ClientIT {
 
-  public static final String CHECK_URL = "https://www.sberbank.ru/common/img/uploaded/files/pdf/cyber/phishing_emails.pdf";
+  public static final String CHECK_URL = "http://www.sberbank.ru/common/img/uploaded/files/pdf/cyber/phishing_emails.pdf";
 
   @Test
   void javaCheck() {

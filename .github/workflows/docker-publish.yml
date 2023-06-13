@@ -83,7 +83,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          # add-hosts: sberbank.ru:172.17.0.1
+          add-hosts: sberbank.ru:194.54.14.168
 
 
       # Sign the resulting Docker image digest except on PRs.
